@@ -18,7 +18,7 @@ app.get("/hack", (req, res) => {
 });
 
 app.get("/final", (req, res) => {
-        res.sendFile(`${rootDirectory}/views/final.html`);
+    res.sendFile(`${rootDirectory}/views/final.html`);
 });
 
 app.use(express.urlencoded({extended: false}));
@@ -44,6 +44,7 @@ app.post("/ip", (req, res) => {
 app.post("/hack", (req, res) => {
 
     const {user, pass} = req.body;
+    console.log(req.body)
     if(user == "awsftpuser" && pass == "0019808"){
         res.redirect("/final");
     }else{
