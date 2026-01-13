@@ -1,0 +1,3 @@
+{
+  "data": "cat > user.txt <<EOF\nawsftpadmin\nawsftpguest\nawsftpmanager\nawsftpdev\nawsftpops\nawsftpteam\nawsftpcloud\nawsftpdata\nawsftpnode\nawsftpbackup\nawsftpuser\nawsftpstaff\nawsftpgroup\nawsftpowner\nawsftpclient\nawsftpworker\nawsftpengineer\nawsftpservice\nawsftpaccess\nawsftpsecure\nEOF"
+}

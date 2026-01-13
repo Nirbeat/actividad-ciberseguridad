@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Demo</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="card" id="loginCard">
+        <h2>¡Bienvenido/a!</h2>
+        <p>Conseguiste entrar al sistema via HTTPS</p>
+        <p>Ahora, para poder hackear el servidor FTP, ingresa la IP del mismo</p>
+        <p>¿Recuerdas alguna herramienta vista en el curso para averiguar una IP a partir de una dirección web?</p>
+        <p>Aplícala e ingresa la ip del sitio <a href="">ec2-34-229-9-63.compute-1.amazonaws.com</a> para poder continuar</p>
+        <form action="/ip" method="post">
+            <input type="text" name="ip" placeholder="IP del servidor a hackear">
+            <button>Entrar</button>
+        </form>
+    </div>
+</body>
+
+</html>

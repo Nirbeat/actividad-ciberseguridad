@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="card" id="loginCard">
+        <h2>¡Ya casi lo tienes!</h2>
+        <p>Para conseguir las credenciales de acceso, ejecuta las siguiente instrucciones en la terminal de comandos</p>
+        <p>Con los diccionarios generados, intenta conseguir usuario y contraseña del server FTP</p>
+        <p>Para generar los diccionarios solo haz click en un botón, luego ve a tu maquiva virtual y pegalo en la
+            consola de comandos</p>
+
+        <button id="copy-user" onclick="getCommand('user.json')">Copiar archivo user.txt</button>
+        <button id="copy-user" onclick="getCommand('pass.json')">Copiar archivo pass.txt</button>
+
+        <p>Usa Hydra una vez más para conseguir las credenciales FTP y tenlas a mano</p>
+        <p>Cuando las consigas, completa también aquí los campos</p>
+        <form action="/hack" method="post">
+                <input type="text" name="user" placeholder="Usuario FTP">
+                <input type="password" name="user" placeholder="Password FTP">
+            <button>Entrar</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    async function getCommand(archivo) {
+        const command = await fetch(archivo)
+            .then(data => data.json())
+        navigator.clipboard.writeText(command.data).then(() => {
+            alert("Comando copiado al portapapeles ✅");
+        });
+    }
+</script>
